@@ -22,15 +22,13 @@ const splitName = () => {
             document.getElementById('lnamediv').style.visibility = 'visible';
         }
         else {
-            var newStr = str.substring(fSpace + 1);
-            console.log(newStr);
+            console.log('');
+            // abc 1 def 2 ghi
             document.getElementById('fname').value = str.substring(0, fSpace);
             document.getElementById('fnamediv').style.visibility = 'visible';
-            var nfSpace = newStr.indexOf(" ");
-            var nlSpace = newStr.lastIndexOf(" ");
-            document.getElementById('mname').value = newStr.substring(0, nfSpace);
+            document.getElementById('mname').value = str.substring(fSpace+1, lSpace);
             document.getElementById('mnamediv').style.visibility = 'visible';
-            document.getElementById('lname').value = newStr.substring(nlSpace + 1);
+            document.getElementById('lname').value = str.substring(lSpace+1);
             document.getElementById('lnamediv').style.visibility = 'visible';
         }
     }
